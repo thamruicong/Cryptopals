@@ -1,4 +1,4 @@
-# Telegram Bot with ChatGPT API
+# the cryptopals crypto challenges
 
 Date Started: 09/07/2025
 
@@ -6,7 +6,7 @@ Date Completed:
 
 This is a project to learn about GoLang & crypto stuff. [Link to challenge.](https://cryptopals.com/)
 
-Currently At: Set 1 Challenge 3
+Currently At: Set 1 Challenge 4
 
 ## To run main
 

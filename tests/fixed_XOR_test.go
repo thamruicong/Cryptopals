@@ -5,8 +5,8 @@ import (
 	"testing"
 )
 
-// Challenge 1 Set 1: Convert hex to base64
-// This test checks if the HexToBase64 function correctly converts a hex string to a base
+// Challenge 1 Set 2: Fixed XOR
+// This test checks if the FixedXOR function correctly computes the XOR of two hex strings
 func TestFixedXOR(t *testing.T) {
 	hexStrA := "1c0111001f010100061a024b53535009181c"
 	hexStrB := "686974207468652062756c6c277320657965"
