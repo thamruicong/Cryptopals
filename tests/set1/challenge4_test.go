@@ -11,7 +11,7 @@ import (
 // This test checks if the SingleByteXORCipher function can correctly identify the line
 // with the highest score in a specific file containing hex-encoded strings
 func TestDetectSingleCharXOR(t *testing.T) {
-	data, err := os.ReadFile("../../assets/set1_challenge4")
+	data, err := os.ReadFile("../../assets/set1_challenge4.txt")
 	if err != nil {
 		t.Fatalf("Unable to read file: %v", err)
 	}
