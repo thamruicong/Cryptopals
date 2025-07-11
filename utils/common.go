@@ -43,10 +43,10 @@ func FixedXOR(a, b string) (string, error) {
 	return hex.EncodeToString(result), nil
 }
 
-func SingleByteXORCipher(input string) (string, error) {
+func SingleByteXORCipher(input string) (string, float64, error) {
 	inputBytes, err := hex.DecodeString(input)
 	if err != nil {
-		return "", fmt.Errorf("Error decoding hex %q: %v", input, err)
+		return "", 0.0, fmt.Errorf("Error decoding hex %q: %v", input, err)
 	}
 
 	var highestScore float64
@@ -64,7 +64,7 @@ func SingleByteXORCipher(input string) (string, error) {
 			bestDecrypted = decrypted
 		}
 	}
-	return string(bestDecrypted), nil
+	return string(bestDecrypted), highestScore, nil
 }
 
 func scoreText(text []byte) float64 {
@@ -78,4 +78,17 @@ func scoreText(text []byte) float64 {
 		total += frequency[byte(unicode.ToLower((rune(c))))]
 	}
 	return total
+}
+
+func RepeatingKeyXOR(plaintext, key string) (string, error) {
+	if len(key) == 0 {
+		return "", fmt.Errorf("Key must not be empty")
+	}
+
+	ciphertext := make([]byte, len(plaintext))
+	for i := 0; i < len(plaintext); i++ {
+		ciphertext[i] = plaintext[i] ^ key[i % len(key)]
+	}
+
+	return hex.EncodeToString(ciphertext), nil
 }

@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-// Challenge 1 Set 1: Convert hex to base64
+// Set 1 Challenge 1: Convert hex to base64
 // This test checks if the HexToBase64 function correctly converts a hex string to a base
 func TestHexToBase64(t *testing.T) {
 	hexStr := "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"

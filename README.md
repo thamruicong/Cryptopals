@@ -6,7 +6,7 @@ Date Completed:
 
 This is a project to learn about GoLang & crypto stuff. [Link to challenge.](https://cryptopals.com/)
 
-Currently At: Set 1 Challenge 4
+Currently At: Set 1 Challenge 6
 
 ## To run main
 
@@ -18,8 +18,8 @@ go run main.go
 
 ## To run tests
 
-Runs all Go tests in `./tests` directory.
+Runs all Go tests in `./tests` directory & its subdirectories.
 
 ```bash
-go test ./tests -v
+go test ./tests/... -v
 ```

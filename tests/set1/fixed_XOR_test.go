@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-// Challenge 1 Set 2: Fixed XOR
+// Set 1 Challenge 2: Fixed XOR
 // This test checks if the FixedXOR function correctly computes the XOR of two hex strings
 func TestFixedXOR(t *testing.T) {
 	hexStrA := "1c0111001f010100061a024b53535009181c"
